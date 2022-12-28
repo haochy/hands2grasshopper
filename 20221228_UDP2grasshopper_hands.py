@@ -84,4 +84,5 @@ with mp_hands.Hands(
 
 
         cv2.imshow("UDP2grasshopper", image)
-        cv2.waitKey(1)
+        if cv2.waitKey(5) == ord('q'):
+            break
