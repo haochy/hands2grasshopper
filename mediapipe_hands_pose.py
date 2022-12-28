@@ -65,9 +65,9 @@ def hand_pos(finger_angle):
     if f1<50 and f2>=50 and f3>=50 and f4>=50 and f5>=50:
         return 'good'
     elif f1>=50 and f2>=50 and f3<50 and f4>=50 and f5>=50:
-        return 'no!!!'
+        return 'fuck you pussy'
     elif f1<50 and f2<50 and f3>=50 and f4>=50 and f5<50:
-        return 'ROCK!'
+        return 'SpiderMan'
     elif f1>=50 and f2>=50 and f3>=50 and f4>=50 and f5>=50:
         return '0'
     elif f1>=50 and f2>=50 and f3>=50 and f4>=50 and f5<50:
@@ -131,7 +131,7 @@ with mp_hands.Hands(
                     finger_angle = hand_angle(finger_points) # 計算手指角度，回傳長度為 5 的串列
                     #print(finger_angle)                     # 印出角度 ( 有需要就開啟註解 )
                     text = hand_pos(finger_angle)            # 取得手勢所回傳的內容
-                    cv2.putText(img, text, (30,120), fontFace, 5, (255,255,255), 10, lineType) # 印出文字
+                    cv2.putText(img, text, (30,120), fontFace, 2.5, (0,0,0), 5, lineType) # 印出文字
 
         cv2.imshow('mediapipe_hands_pose', img)
         if cv2.waitKey(5) == ord('q'):
